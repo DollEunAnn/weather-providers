@@ -16,6 +16,7 @@ class ApixuProvider implements WeatherInterface
     public function getWeather($city)
     {
         $url = sprintf('%s?key=%s&q=%s', $this->url,$this->key,$city);
+        var_dump($url); exit;
 
         $contents = json_decode(file_get_contents($url));
 
